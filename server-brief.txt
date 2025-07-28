@@ -1,0 +1,46 @@
+Outfit cloud database thing  
+Basis - In the game users need to be able to create outfits and upload them to the database.  
+Users can also browse outfits through the shop, or they can browse through outfits they have  
+uploaded before.  
+Content creators should also be able to generate links that contain metadata that point to an  
+outfit, and then that outfit should be retrievable when the player join a game through that link.  
+
+Example of an outfit browser  
+
+Desired APIs:  
+
+GetOutfitDetails(OutfitUniqueIds {Dictionary}) —> OutfitDatas {Dictionary}  
+Allows you to submit a dictionary of outfit unique ids (that will look like an array but I want  
+dictionary functionality) and returns outfit data for each unique id given  
+e.g.  
+Request: {[1] = 823112, [2] = 3428323, [3] = 29329832}  
+Returns: {[1] = 823112_OutfitData, [2] = 3428323_OutfitData, [3] = 29329832_OutfitData}  
+
+SearchOutfitsAsync(Search_Params {Dictionary}) —> SearchResult {Array}  
+Returns an array of a pre-determined length containing outfits relevant to the Search_Params.  
+Additional: Relevant sort filter that scores outfits based off their like:view ratio and how recently they  
+were uploaded to try and provide fresh, yet good quality results  
+e.g.  
+Request: {SortType = ‘Newest’, Amount = 120, SearchKeyword = ‘Summer’}  
+Returns: {[1] = {  
+  [‘views’] = 0,  
+  [‘favourites’] = 0,  
+  [‘name’] = 0,  
+  [‘uploadTime’] = 0,  
+  [‘price’] = 0,  
+  [‘otherUsefulMetadata’] = ‘’  
+  [‘serializedDescription’] = OutfitData  
+}, [2] = etc.}  
+
+Example of search criteria  
+
+UploadOutfit(OutfitInfo {Dictionary}) —> OutfitUniqueId {Int}  
+Allows you to upload an outfit. UploadInfo will probably include a json encoded string off all the  
+accessories, then some metadata like the outfit name and price which can be used for searching.  
+e.g.  
+Request: {Name = ‘Summer Fairy’, AccessoryData = “JSON_ENCODED_TABLE”, Price = 564}  
+Returns: 8293912  
+
+Increment Async API  
+Allows you to increment views / favourites on an outfits at once.  
+Example: IncrementViews({OutfitUniqueId, OutfitUniqueId})

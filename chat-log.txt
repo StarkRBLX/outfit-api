@@ -1,0 +1,58 @@
+
+Mr. Stark — 7/19/2025 10:37 PM
+Hey whats up
+LuaBearyGood — 7/19/2025 10:41 PM
+Hey
+Heres the brief of basically what we need done, if you need further examples or have any questions then lmk im around for another couple hours today
+Attachment file type: acrobat
+serverbrief v3.pdf
+577.26 KB
+Then once all is clear we can proceed
+Mr. Stark — 7/19/2025 10:54 PM
+Alright leme check it out
+Mr. Stark — 7/20/2025 1:19 AM
+So you need me to setup the database + a api for the database or queries that can be mapped to those outfit functions that u can call in game? 
+LuaBearyGood — 7/20/2025 3:57 PM
+yes exactly
+if you go in catalog avatar creator
+we’re basically trying to recreate the community outfits browser
+so we need all the apis in the document which can be called from roblox
+if you could make a roblox sided sdk that would probably be best, but if not i can build that
+Mr. Stark — 7/20/2025 6:13 PM
+I can try to do that too yea, will look into the roblox documentation
+LuaBearyGood — 7/20/2025 6:46 PM
+do you have any further questions and how much would you charge to build a system like this
+Mr. Stark — 7/20/2025 7:33 PM
+I'm not a 100% sure if I can make it because I'm more of a web dev with some roblox dev experience (still learning roblox dev side) but I'll try to integrate it all. 
+
+Do u need a specefic kind of database like supabase or postgres sql specefically or doesn't matter as long as u can call the apis and store & retrieve data? 
+
+Also all the json / object fields are in the pdf right? anything else u wana add?
+
+Also do I host the database & external api endpoints for it? How many average requests u think would it make? (So can configure the server based on that)
+
+How fast do u need it built, whats your deadline?
+LuaBearyGood — 7/20/2025 10:28 PM
+Currently we're with a company called hostinger, however if you have a preference that will cost us a similar amount we're happy to switch. We dont mind so much so long as the apis for storing / retreiving data work.
+
+Yes, the only thing to take note of is the actual blob of outfit metadata, that may contain more keys and values.
+
+We can host it, and you just built it. Or you can host it and we can pay you monthly- up to you. Im assuming its easier for us to host it. We need about 100GB of storage and unlimited bandwidth we want to be able to do at least a couple million requests a day to start with- with the option to scale up.
+
+We need it built within 2 weeks
+Image
+Mr. Stark — 7/20/2025 10:55 PM
+Alright, sounds good. Given the requirements and timeline, I can get it done for $150.
+
+Yea, I'm okay with Hostinger VPS and setup the database and apis there, I believe kvm 2 comes with 100GB storage & 8TB bandwidth per month, so we should be set there as its probably plenty of bandwith for just metadata.
+
+Also just to clarify, you need the metadata to be flexible with dynamic keys and values so u can add more as needed?
+LuaBearyGood — 7/20/2025 10:56 PM
+That would be best yes
+Mr. Stark — 7/20/2025 10:56 PM
+Alright I'll try to get it done asap and build a roblox sdk for it if possible too
+LuaBearyGood — 7/20/2025 10:58 PM
+Do you need anything more from me?
+or are you ok to start
+Mr. Stark — 7/20/2025 10:58 PM
+I think I am but if I need anything I'll ask
